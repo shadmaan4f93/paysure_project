@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from insurer.views import upload_policy
+from insurer.views import upload_policy,process_payment
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-     url(r'^policy/', upload_policy,name="policy upload"),
+    url(r'^policy/', upload_policy,name="policy upload"),
+    url(r'^payment/', process_payment,name="policy payment")
 ]
