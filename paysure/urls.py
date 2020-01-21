@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
+from insurer.views import upload_policy
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls)
+    url(r'^admin/', admin.site.urls),
+     url(r'^policy/', upload_policy,name="policy upload"),
 ]
